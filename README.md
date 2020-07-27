@@ -1,24 +1,24 @@
 [![대한전기학회 로고1](https://user-images.githubusercontent.com/57785792/87243837-30ab3b00-c474-11ea-9eaa-20c3d5df3c80.jpg)](http://www.kiee.or.kr/)
 
-# 2020 미니드론 자율비행 경진대회
-### <img src="https://user-images.githubusercontent.com/57785792/87592435-d08ef000-c724-11ea-84ad-f33e3684752b.jpg" width="40" height="30">경희대학교 "드르론드르론" 팀 
+# 2020 Mini drone autonomous flight competition
+### <img src="https://user-images.githubusercontent.com/57785792/87592435-d08ef000-c724-11ea-84ad-f33e3684752b.jpg" width="40" height="30">Kyunghee University  
 
 ***
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![License](https://img.shields.io/badge/Raspberry%20pi%20zero-pass-blue) ![License](https://img.shields.io/badge/python-v3.7.3-brightgreen) ![License](https://img.shields.io/badge/open.cv-v3.2.0-brightgreen) 
 
 ## 목차 
-**1. 대회 진행 전략**   
-**2. 알고리즘 설명**   
-**3. 소스 코드 설명**   
-**4. 허밍버드 Data sheet**   
+**1. Progress strategy**   
+**2. Algorithm**   
+**3. Source code**   
+**4. Data sheet of Humming bird**   
 **5. Author**   
 **6. License**   
 
 ***
-## 1. 대회 진행 전략
-### 1-a. 제공된 과제를 통한 python 문법 이해 및 응용
-### 1-b. Raspberry pi를 이용한 data 통신의 이해 
-   * Raspberry pi를 통해 PC로 드론을 control 
+## 1. Progress strategy
+### 1-a. Understanding of python
+### 1-b. Understanding of Raspberry pi communicate 
+   * Control a drone by pc through Raspberry pi
    ![communication](https://user-images.githubusercontent.com/57785792/87245242-c77cf500-c47e-11ea-8509-cd09d20e656e.PNG)
 
 ### 1-c. 대회에 필요한 프로그램들의 사용법 숙달
