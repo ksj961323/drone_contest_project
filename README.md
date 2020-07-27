@@ -63,8 +63,8 @@
 ### 1-f. Map 
  <img src="https://user-images.githubusercontent.com/57785792/87243596-343dc280-c472-11ea-9ef1-3f49f39e3d71.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87506097-7569e880-c6a5-11ea-9207-a845a97a5c6d.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87506091-7438bb80-c6a5-11ea-91df-7ae24ff78986.jpg" width="320" height="240"> 
 
-   * Fix below the ceiling but we can change height
-   * About the third ring, it can change right and left
+   * Fix rings below the ceiling and we can change heights of ring
+   * About the third ring, it can change right or left
    * Have some patterns on the floor for stable hovering 
  
 ### 1-g. Error handling
