@@ -57,8 +57,8 @@
    |position Z|float|-10.0 ~ 10.0|meter|up(+), down(-)|
    |velocity|float|0.5 ~ 2.0|meter|moving velocity|
    |heading|Int16|-360 ~ 360|degree|left turn(+), right turn(-)|
-   |rotationalVelocity|Int16|10 ~ 360|degree/s|turning velocity|
-   * 참조코드 링크: http://dev.byrobot.co.kr/documents/kr/products/e_drone/library/python/e_drone/
+   |rotationalVelocity|Int16|10 ~ 360|degree/s|rotational velocity|
+   * Reference code : http://dev.byrobot.co.kr/documents/kr/products/e_drone/library/python/e_drone/
 
 ### 1-f. Map 
  <img src="https://user-images.githubusercontent.com/57785792/87243596-343dc280-c472-11ea-9ef1-3f49f39e3d71.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87506097-7569e880-c6a5-11ea-9207-a845a97a5c6d.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87506091-7438bb80-c6a5-11ea-91df-7ae24ff78986.jpg" width="320" height="240"> 
@@ -100,8 +100,8 @@ drone = Drone()
 drone.open()
   ```
    ### Function 
-   * 링의 중심을 찾는 함수
-   * 링의 중심을 return
+   * The function of find the ring
+   * Return value is center of the ring
 ```python 
 def detect_rect(img_hsv):
     try:
@@ -146,13 +146,13 @@ def detect_rect(img_hsv):
 ```
 
  <img src="https://user-images.githubusercontent.com/57785792/87419185-05f4ea00-c60e-11ea-8a12-afb6386b9094.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87418485-b8c44880-c60c-11ea-9531-df2a25db001e.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87418488-b9f57580-c60c-11ea-8c97-bb9fb3afe7ec.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87418488-b9f57580-c60c-11ea-8c97-bb9fb3afe7ec.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87418494-ba8e0c00-c60c-11ea-9446-05676e2bf838.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87418496-bbbf3900-c60c-11ea-9cc4-01175ab64b2e.jpg" width="320" height="240"> 
-   | **원본** | **HSV** |
+   | **original** | **HSV** |
    |:--------:|:--------:|
    |**mask_green**|**morphology**|
    |**median**|**result**|
 ***
-   * 원의 색 검출 함수
-   * 원의 색을 return
+   * The function of find the color of circle
+   * Return value is color of circle
    ```python
    def detect_color(img_hsv):
     img_mask_red1 = cv2.inRange(img_hsv, lower_red1, upper_red1)
@@ -170,8 +170,8 @@ def detect_rect(img_hsv):
     return circle_color
    ```
    ***
-   * 원 검출 함수
-   * 원의 중심을 return
+   * The function of find the circle
+   * Return value is center of circle
    ```python
    def detect_circle(img_hsv, circle_color):
     if circle_color == 'red':
@@ -205,8 +205,8 @@ def detect_rect(img_hsv):
   |  **result** |  |
   ***
 
-  ### try 문 내부
-  * take off 후 0.7m 전진 & mode 2 시작
+  ### Inside of try
+  * After take off, go forward for 0.7m & begin mode 2
   ```python 
 try:
     drone.sendTakeOff()
@@ -238,7 +238,7 @@ try:
 
         rawCapture.truncate(0)  
   ```
-  * mode 1 : 1.3m 직진 & mode 2 전환
+  * mode 1 : go forward for 1.3m & change to mode 2
    ```python 
        if mode1:  # 1.3m
             drone.sendControlPosition16(13, 0, 0, 5, 0, 0)
@@ -248,7 +248,7 @@ try:
             
   ```
   
-   * mode 2 :좌우 상하 조정 및 각도 미세조정 (정확히 정면을 바라보게 함) & mode 3 전환
+   * mode 2 : Control left right and degree adjustment (watch the camera straight forward) & change to mode 3 
    ```python 
         
         elif mode2:
@@ -300,8 +300,8 @@ try:
                                 sleep(3)
                                 mode2 = False
                                 mode3 = True
-  ```
-  * mode 3 : 원의 색 검출 및 원 검출 후 직진 (색이 Blue 일때 Landing, 색이 Red 일 때 90도 회전) 
+  ``` 
+  * mode 3 : go forward after find a color of the circle and find cirle   (Blue color is Landing, Red color is rotate for 90 degrees to counter clockwise) 
    ```python 
         elif mode3:
             circle_color = detect_color(img_hsv)
@@ -330,7 +330,7 @@ try:
                         mode1 = True
 ```
    
-   * Error 발생 시 Landing(충돌 예방)
+   * If there is errors just landing (prevention of collision)
    ```python 
 except Exception as e:
     drone.sendLanding()
@@ -339,12 +339,12 @@ except Exception as e:
    
   
   
-## 4. 허밍버드 Data sheet 
+## 4. Data sheet of humming bird 
 ![Hummingbird](https://user-images.githubusercontent.com/57785792/87243462-20459100-c471-11ea-912a-3ae214db21a1.PNG)
 * Go to [Details]( http://www.roboworks.co.kr/web/home.php?go=page_view&gubun=1&mid=10)
 ## 5. Author
-### 팀장: [김승직](https://github.com/ksj961323)    
-### 팀원: [김영인](https://github.com/yeongin1230), [정소영](https://github.com/jsy5236)
+### Team leader: [Seungjik Kim](https://github.com/ksj961323)    
+### Team members: [Yeonging Kim](https://github.com/yeongin1230), [Soyoung Jung](https://github.com/jsy5236)
 ## 6. License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/yeongin1230/Bleague_drronedrrone/blob/master/LICENSE) file for details
