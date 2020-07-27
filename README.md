@@ -21,43 +21,43 @@
    * Control a drone by pc through Raspberry pi
    ![communication](https://user-images.githubusercontent.com/57785792/87245242-c77cf500-c47e-11ea-8509-cd09d20e656e.PNG)
 
-### 1-c. 대회에 필요한 프로그램들의 사용법 숙달
+### 1-c. Practicing of using programs for contest
   
-   ### 사용 프로그램
+   ### Using program
 
    #### <img src="https://user-images.githubusercontent.com/57785792/87244515-e5475b80-c478-11ea-9177-7aef730dd40a.jpg" width="20" height="20"> PyCharm Community Edition 2020
-   * 파이썬 코드 편집을 위해 사용
+   * Using for editting python 
    * [Guide](https://dora-guide.com/pycharm-install/)
 
    #### <img src="https://user-images.githubusercontent.com/57785792/87244655-9221d880-c479-11ea-9f17-bd71250f5528.jpg" width="20" height="20"> WinSCP
-   * Data file 전송을 위해 사용
+   * Using for data file trasfer
    * [Guide](http://blog.naver.com/PostView.nhn?blogId=websarang_&logNo=100052630947&viewDate=&currentPage=1&listtype=0)
 
 
    ####  <img src="https://user-images.githubusercontent.com/57785792/87244362-a95fc680-c477-11ea-9a8d-75ccf17f3cb1.png" width="20" height="20"> VNC viewer 
-   * PC와 Raspberry pi의 원격 연결을 위해 사용
+   * Using for connect PC and Raspberry pi
    * [Guide](https://itgroovy.tistory.com/549)
 
    #### <img src="https://user-images.githubusercontent.com/57785792/87244698-052b4f00-c47a-11ea-9a52-2520feb5dfed.png" width="20" height="20"> Sourcetree
-   * Github update를 위해 사용
+   * Using for github update
    * [Guide](https://ux.stories.pe.kr/181)
 
-### 1-d. 드론의 비행에 대한 이론적 이해 
-   * Throttle, Roll, Pitch, Yaw를 조절하여 position control
+### 1-d. Theorical understanding for flight of drone 
+   * Changing of Throttle, Roll, Pitch and Yaw for position control
 <img src="https://user-images.githubusercontent.com/57785792/87271991-e7102e00-c50f-11ea-8bd5-b28e52916819.png" width="443" height="333">
 
-### 1-e. 드론의 Position code 및 응용 code
+### 1-e. Position codes of drone and application codes
    ```python
    def sendControlPosition(self, positionX, positionY, positionZ, velocity, heading, rotationalVelocity):
    ```
-   | 변수 이름 | 형식 | 범위 | 단위 | 설명 |
+   | Variable name | form | range | unit | explain |
    |:---------:|:----:|:----:|:---:|:---:|
-   |position X|float|-10.0 ~ 10.0|meter|앞(+), 뒤(-)|
-   |position Y|float|-10.0 ~ 10.0|meter|좌(+), 우(-)|
-   |position Z|float|-10.0 ~ 10.0|meter|위(+), 아래(-)|
-   |velocity|float|0.5 ~ 2.0|meter|위치 이동 속도|
-   |heading|Int16|-360 ~ 360|degree|좌회전(+), 우회전(-)|
-   |rotationalVelocity|Int16|10 ~ 360|degree/s|좌우 회전 속도|
+   |position X|float|-10.0 ~ 10.0|meter|forward(+), behind(-)|
+   |position Y|float|-10.0 ~ 10.0|meter|left(+), right(-)|
+   |position Z|float|-10.0 ~ 10.0|meter|up(+), down(-)|
+   |velocity|float|0.5 ~ 2.0|meter|moving velocity|
+   |heading|Int16|-360 ~ 360|degree|left turn(+), right turn(-)|
+   |rotationalVelocity|Int16|10 ~ 360|degree/s|turning velocity|
    * 참조코드 링크: http://dev.byrobot.co.kr/documents/kr/products/e_drone/library/python/e_drone/
 
 ### 1-f. 경기장 구성
