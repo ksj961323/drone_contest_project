@@ -6,7 +6,7 @@
 ***
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![License](https://img.shields.io/badge/Raspberry%20pi%20zero-pass-blue) ![License](https://img.shields.io/badge/python-v3.7.3-brightgreen) ![License](https://img.shields.io/badge/open.cv-v3.2.0-brightgreen) 
 
-## 목차 
+## Context 
 **1. Progress strategy**   
 **2. Algorithm**   
 **3. Source code**   
@@ -60,32 +60,32 @@
    |rotationalVelocity|Int16|10 ~ 360|degree/s|turning velocity|
    * 참조코드 링크: http://dev.byrobot.co.kr/documents/kr/products/e_drone/library/python/e_drone/
 
-### 1-f. 경기장 구성
+### 1-f. Map 
  <img src="https://user-images.githubusercontent.com/57785792/87243596-343dc280-c472-11ea-9ef1-3f49f39e3d71.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87506097-7569e880-c6a5-11ea-9207-a845a97a5c6d.jpg" width="320" height="240"> <img src="https://user-images.githubusercontent.com/57785792/87506091-7438bb80-c6a5-11ea-91df-7ae24ff78986.jpg" width="320" height="240"> 
 
-   * 낚시줄을 이용해 천장에 부착하여 상하 조절 가능
-   * 3단계는 천장의 레일을 통해 좌우 이동 가능
-   * 안정한 호버링을 위해 바닥에 일정한 패턴 구성 (악조건을 위해 없애고도 비행) 
+   * Fix below the ceiling but we can change height
+   * About the third ring, it can change right and left
+   * Have some patterns on the floor for stable hovering 
  
 ### 1-g. Error handling
 #### Hardware problem
-    대회 측에서 제공해준 컨트롤러의 Sensor Reset 기능을 이용하여 H.W 설정값 초기화
-    안정적 호버링을 위해 Trim 설정
-    전체 Guide는 아래의 manual 참조 
+    Use sensor reset in controller for H.W problem
+    Setting trim for stable hovering
+    Check the whole manual 
   Go to "[manual](http://www.roboworks.co.kr/web/home.php?mid=10&go=pds.list&pds_type=1&start=0&num=23&s_key1=&s_que=) "
    
 #### Software problem
-    Try catch 문을 이용해 주행 중 Error 발생시 Landing 하여 드론의 충돌 방지
+    Used the try catch grammer for landing that you have any errors in flight
 
-## 2. 알고리즘 설명
-    mode3 에서 원의 색이 빨간색이면 다시 mode1 으로 이동
-    이후 mode3 에서 파란색 원 검출 시 Landing
+## 2. Algorithm
+    In mode3, if the circle color is red go back to mode 1
+    After in mode3, if the circle color is blue just Landing
    ![real_last_algorithm](https://user-images.githubusercontent.com/57785792/87593697-d259b300-c726-11ea-9e77-56ba574bf0dd.PNG)
 
 
-## 3. 소스 코드 설명
-  ### Mask 값 설정
-  * 대회 측에서 제공한 사진에 의거한 값
+## 3. Source code
+  ### Setting the mask of ring
+  * Pictures from contest map
   ```python
 lower_green = (60, 150, 55)
 upper_green = (80, 255, 255)
