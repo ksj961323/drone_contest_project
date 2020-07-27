@@ -1,4 +1,4 @@
-[![대한전기학회 로고1](https://user-images.githubusercontent.com/57785792/87243837-30ab3b00-c474-11ea-9eaa-20c3d5df3c80.jpg)](http://www.kiee.or.kr/)
+[![KIEE](https://user-images.githubusercontent.com/57785792/88495612-69f7b500-cff5-11ea-8d13-9d8f5b3f7260.PNG)](http://www.kiee.or.kr/)
 
 # 2020 Mini drone autonomous flight competition
 ### <img src="https://user-images.githubusercontent.com/57785792/87592435-d08ef000-c724-11ea-84ad-f33e3684752b.jpg" width="40" height="30">Kyunghee University  
@@ -344,7 +344,7 @@ except Exception as e:
 * Go to [Details]( http://www.roboworks.co.kr/web/home.php?go=page_view&gubun=1&mid=10)
 ## 5. Author
 ### Team leader: [Seungjik Kim](https://github.com/ksj961323)    
-### Team members: [Yeonging Kim](https://github.com/yeongin1230), [Soyoung Jung](https://github.com/jsy5236)
+### Team members: [Yeongin Kim](https://github.com/yeongin1230), [Soyoung Jung](https://github.com/jsy5236)
 ## 6. License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/yeongin1230/Bleague_drronedrrone/blob/master/LICENSE) file for details
