@@ -17,7 +17,7 @@
 ***
 ## 1. Progress strategy
 ### 1-a. Understanding of python
-### 1-b. Understanding of Raspberry pi communicate 
+### 1-b. Understanding of Raspberry pi communication
    * Control a drone by pc through Raspberry pi
    ![communication](https://user-images.githubusercontent.com/57785792/87245242-c77cf500-c47e-11ea-8509-cd09d20e656e.PNG)
 
